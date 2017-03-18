@@ -1,9 +1,12 @@
 %header
   %nav.menu
     %ul
+      - Gallery.all.each do |gallery|
+        %li.item
+          = link_to gallery.name, gallery_path(gallery), class: active_class(gallery_path(gallery))
       %li.item
-        = link_to 'Home', root_path
+        = link_to 'Home', root_path, class: active_class(root_path)
       %li.item
-        = link_to 'About', about_path
+        = link_to 'About', about_path, class: active_class(about_path)
       %li.item
-        = link_to 'Contact', about_path
+        = link_to 'Contact', contact_path, class: active_class(contact_path)

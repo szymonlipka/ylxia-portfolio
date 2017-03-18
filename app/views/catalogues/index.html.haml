@@ -1,0 +1,23 @@
+%h1 Listing catalogues
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Gallery
+      %th
+      %th
+      %th
+
+  %tbody
+    - @catalogues.each do |catalogue|
+      %tr
+        %td= catalogue.name
+        %td= catalogue.gallery_id
+        %td= link_to 'Show', catalogue
+        %td= link_to 'Edit', edit_catalogue_path(catalogue)
+        %td= link_to 'Destroy', catalogue, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Catalogue', new_catalogue_path

@@ -10,3 +10,10 @@
         = link_to 'About', about_path, class: active_class(about_path)
       %li.item
         = link_to 'Contact', contact_path, class: active_class(contact_path)
+      - if current_user
+        %li.item
+          = link_to 'Galleries', galleries_path, class: active_class(contact_path)
+        %li.item
+          = link_to 'Catalogues', catalogues_path, class: active_class(contact_path)
+        %li.item
+          = link_to 'Works', works_path, class: active_class(contact_path)

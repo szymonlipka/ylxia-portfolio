@@ -6,8 +6,10 @@
         - @gallery.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
+  .form-group
     = f.label :name
-    = f.text_field :name
-  .actions
-    = f.submit 'Save'
+    = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :name_unique
+    = f.text_field :name_unique, class: 'form-control'
+  = f.submit 'Save', class: 'btn btn-primary'

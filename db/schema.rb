@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170310190309) do
+ActiveRecord::Schema.define(version: 20170402170657) do
 
   create_table "catalogues", force: :cascade do |t|
     t.string   "name"
@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(version: 20170310190309) do
 
   create_table "galleries", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name_unique"
   end
 
   create_table "users", force: :cascade do |t|

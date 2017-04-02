@@ -10,7 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require tether-theme-basic
+ *= require tether-theme-arrows
+ *= require tether-theme-arrows-dark
  *= require_self
  */
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import '/*';

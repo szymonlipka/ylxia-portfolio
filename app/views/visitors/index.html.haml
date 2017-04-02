@@ -1,2 +1,4 @@
-%h5
-  HELLO WORLD
+.owl-carousel.works
+  - @works.shuffle.each do |work|
+    .work
+      = image_tag work.image.url

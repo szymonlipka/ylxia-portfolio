@@ -1,19 +1,27 @@
-%header
-  %nav.menu
-    %ul
-      - Gallery.all.each do |gallery|
-        %li.item
-          = link_to gallery.name, gallery_path(gallery), class: active_class(gallery_path(gallery))
+%nav.menu.navbar.navbar-fixed-top
+  %ul
+    - @galleries.each do |gallery|
       %li.item
-        = link_to 'Home', root_path, class: active_class(root_path)
+        = link_to gallery.name, gallery_path(gallery), class: active_class(gallery_path(gallery))
+    %li.item
+      = link_to 'Home', root_path, class: active_class(root_path)
+    %li.item
+      = link_to 'About', about_path, class: active_class(about_path)
+    %li.item
+      = link_to 'Contact', contact_path, class: active_class(contact_path)
+    %li.item
+      = link_to 'https://www.facebook.com/ylxiadrawing' do
+        %i.fa.fa-facebook{aria: {hidden: 'true'}}
+      = link_to 'https://www.instagram.com/ylxiaa' do
+        %i.fa.fa-instagram
+      = link_to 'https://www.ylxiadrawing.tumblr.com/' do
+        %i.fa.fa-tumblr
+    - if current_user
       %li.item
-        = link_to 'About', about_path, class: active_class(about_path)
+        = link_to 'Galleries', galleries_path, class: active_class(contact_path)
       %li.item
-        = link_to 'Contact', contact_path, class: active_class(contact_path)
-      - if current_user
-        %li.item
-          = link_to 'Galleries', galleries_path, class: active_class(contact_path)
-        %li.item
-          = link_to 'Catalogues', catalogues_path, class: active_class(contact_path)
-        %li.item
-          = link_to 'Works', works_path, class: active_class(contact_path)
+        = link_to 'Catalogues', catalogues_path, class: active_class(contact_path)
+      %li.item
+        = link_to 'Works', works_path, class: active_class(contact_path)
+      %li.item
+        = link_to 'Sign out', destroy_user_session_path, method: :delete

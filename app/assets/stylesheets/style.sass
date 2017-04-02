@@ -1,7 +1,15 @@
 body
   background-color: #cccccc
   font-family: Ubuntu !important
+  font-weight: 700
+header
+  margin-bottom: 50px
+  .navbar
+    min-height: 0
+.centred-text
+  text-align: center
 .menu
+  background-color: black
   ul
     margin-top: 5px
     padding-left: 0
@@ -10,22 +18,20 @@ body
     text-align: center
     li.item
       display: inline-block
-      margin: 0 25px 16px 25px
+      margin: 5px 25px 0 25px
       font-size: 14px
       a
-        color: #666666
+        color: white
+        text-decoration: none
         &:hover
           background-color: inherit
-          text-decoration: none
           color: #FD6CA3
       a.active
         color: orange
 
-.catalogues
+.works
   margin: 20px
-  .catalogue
-    width: 50%
-    margin: 40px auto
+  .work
     border-radius: 4px
     border: 1px #cccccc solid
     box-shadow: 0 0 10px 0 rgba(39,49,65,0.1)
@@ -33,9 +39,34 @@ body
     img
       border-radius: 4px
       box-shadow: 0 0 10px 0 rgba(39,49,65,0.1)
-      opacity: 0.8
-      &:hover
-        opacity: 1
+      width: 100%
+.catalogue-page
+  .works
+    .work
+      width: 50%
+      margin: 40px auto
+.catalogues
+  width: 60%
+  margin: auto
+  .catalogue
+    display: inline-block
+    width: 30%
+    position: relative
+    h4
+      top: 40%
+      left: 50%
+      transform: translate(-50%, -50%)
+      position: absolute
+      display: none
+      color: black
+    &:hover
+      opacity: 1
+      h4
+        display: block
+    opacity: 0.8
+    img
+      border-radius: 4px
+      box-shadow: 0 0 10px 0 rgba(39,49,65,0.1)
       width: 100%
 
 .authform

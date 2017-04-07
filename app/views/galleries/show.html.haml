@@ -1,7 +1,7 @@
 .catalogues
   - @gallery.catalogues.each do |catalogue|
     .catalogue
-      = link_to catalogue_path(catalogue) do
+      = link_to gallery_catalogue_path(gallery_id: @gallery.name_unique, id: catalogue.name_unique) do
         %h4
           = catalogue.name
         = image_tag catalogue.representative_image.url

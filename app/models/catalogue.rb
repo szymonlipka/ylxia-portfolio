@@ -17,4 +17,6 @@ class Catalogue < ApplicationRecord
   has_many :works
   belongs_to :gallery
 
+  validates :name_unique, presence: true, uniqueness: true
+
 end

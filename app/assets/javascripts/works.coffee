@@ -8,5 +8,11 @@ $(document).ready ->
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: false,
-    margin: 10
+    margin: 10,
+    responsive : {
+      480 : { items : 4  },
+      768 : { items : 6  },
+      1024 : { items : 8
+      }
+    }
   })

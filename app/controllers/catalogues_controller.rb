@@ -1,5 +1,6 @@
 class CataloguesController < ApplicationController
   before_action :set_catalogue, only: [:show, :edit, :update, :destroy]
+  before_action :set_gallery, only: :show
   before_action :authenticate_user!, except: :show
 
   # GET /catalogues
@@ -65,11 +66,11 @@ class CataloguesController < ApplicationController
   private
 
   def set_gallery
-    @gallery = Gallery.find(params[:gallery_id])
+    @gallery = Gallery.find_by(name_unique: params[:gallery_id])
   end
   # Use callbacks to share common setup or constraints between actions.
   def set_catalogue
-    @catalogue = Catalogue.find(params[:id])
+    @catalogue = Catalogue.find_by(name_unique: params[:id]) || Catalogue.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

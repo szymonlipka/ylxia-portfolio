@@ -2,7 +2,7 @@
   %ul
     - @galleries.each do |gallery|
       %li.item
-        = link_to gallery.name, gallery_path(gallery), class: active_class(gallery_path(gallery))
+        = link_to gallery.name, gallery_path(id: gallery.name_unique), class: @gallery == gallery ? 'active' : ''
     %li.item
       = link_to 'Home', root_path, class: active_class(root_path)
     %li.item

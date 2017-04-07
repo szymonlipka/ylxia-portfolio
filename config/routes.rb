@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :galleries
-  resources :catalogues
+  resources :galleries do
+    resources :catalogues, only: :show
+  end
+
+  resources :catalogues, except: :show
+
   resources :works
 
   root to: 'visitors#index'

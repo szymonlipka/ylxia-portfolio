@@ -1,7 +1,8 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
-$(document).ready ->
+
+loadCarousel = ->
   owl = $('.owl-carousel')
   owl.owlCarousel({
     loop: true,
@@ -16,3 +17,9 @@ $(document).ready ->
       }
     }
   })
+
+document.addEventListener('turbolinks:load', -> loadCarousel())
+
+$(document).ready ->
+  loadCarousel()
+

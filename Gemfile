@@ -17,6 +17,8 @@ gem 'aws-sdk'
 gem 'font-awesome-sass'
 gem 'tether-rails'
 gem 'modernizr-rails'
+gem 'mail_form'
+gem 'simple_form'
 
 group :development, :test do
   gem 'byebug', platform: :mri

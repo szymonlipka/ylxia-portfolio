@@ -10,9 +10,9 @@ $(document).ready ->
     autoplayHoverPause: false,
     margin: 10,
     responsive : {
-      480 : { items : 4  },
-      768 : { items : 6  },
-      1024 : { items : 8
+      480 : { items : 2  },
+      768 : { items : 4  },
+      1024 : { items : 6
       }
     }
   })

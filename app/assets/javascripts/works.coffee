@@ -2,24 +2,14 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-loadCarousel = ->
-  owl = $('.owl-carousel')
-  owl.owlCarousel({
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: false,
-    margin: 10,
-    responsive : {
-      480 : { items : 2  },
-      768 : { items : 4  },
-      1024 : { items : 6
-      }
-    }
-  })
+bindEvents = ->
+  $('.catalogue').hover( ->
+    $(this).find('.inner-name').fadeIn()
+  )
 
-document.addEventListener('turbolinks:load', -> loadCarousel())
+  $('.catalogue').mouseleave( ->
+    $(this).find('.inner-name').fadeOut()
+  )
 
-$(document).ready ->
-  loadCarousel()
+document.addEventListener('turbolinks:load', -> bindEvents())
 

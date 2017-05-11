@@ -1,4 +1,10 @@
-.owl-carousel.works
+.cover
+  .cover-image
+  .see-more
+    .icon
+      %i.glyphicon.glyphicon-menu-down
+
+.works
   - @works.shuffle.each do |work|
-    .work
+    .work{style: "background-image: url(\"#{work.image.url}\")"}
       = image_tag work.image.url

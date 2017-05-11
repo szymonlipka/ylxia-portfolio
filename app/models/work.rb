@@ -1,6 +1,7 @@
 # Work
 # catalogue_id:integer
 # name:string
+# top_work:boolean
 
 class Work < ApplicationRecord
 

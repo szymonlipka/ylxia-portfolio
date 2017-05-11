@@ -1,10 +1,10 @@
 body
   background-color: #cccccc
   font-family: Ubuntu !important
-  font-weight: 700
+  font-weight: 500
   overflow-x: hidden
 header
-  margin-bottom: 50px
+  margin-bottom: 40px
   .navbar
     min-height: 0
 .hidden
@@ -34,43 +34,47 @@ header
         color: orange
 
 .works
-  margin: 20px
+  width: 66%
+  margin: auto
   .work
-    border-radius: 4px
-    border: 1px #cccccc solid
-    box-shadow: 0 0 10px 0 rgba(39,49,65,0.1)
-    padding: 5px
+    margin: 20px
+    display: inline-block
+    width: 220px
+    position: relative
+    height: 220px
     img
-      border-radius: 4px
+      height: 100%
       box-shadow: 0 0 10px 0 rgba(39,49,65,0.1)
       width: 100%
-.works.catalogue-page
-  .work
-    width: 50%
-    margin: 40px auto
 .catalogues
   width: 60%
   margin: auto
   .catalogue
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 276px
     display: inline-block
-    width: 30%
+    width: 276px
+    height: 276px
     position: relative
-    h4
-      top: 40%
-      left: 50%
-      transform: translate(-50%, -50%)
-      position: absolute
+    margin: 20px
+    border-radius: 50%
+    .inner-name
+      border-radius: inherit
       display: none
-      color: black
-    &:hover
-      opacity: 1
-      h4
-        display: block
-    opacity: 0.8
-    img
-      border-radius: 4px
-      box-shadow: 0 0 10px 0 rgba(39,49,65,0.1)
       width: 100%
+      height: 100%
+      background-color: black
+      opacity: 0.6
+      h4
+        text-align: center
+        padding: 32px
+        margin: 0 !important
+        position: absolute
+        color: white
+        z-index: 105
+        width: 100%
+        font-size: 21px
 
 .authform
   width: 50%
@@ -103,3 +107,28 @@ header
   p
     font-size: 15px
     margin-top: 20px
+.cover
+  .cover-image
+    top: 0
+    background-image: url("cover-image.jpg")
+
+    /* Set a specific height */
+    height: 950px
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+  .see-more
+    height: 20px
+    position: absolute
+    bottom: 32px
+    width: 100%
+    z-index: 105
+    .icon
+      font-size: 30px
+      text-align: center

@@ -1,8 +1,7 @@
 .catalogues
   - @gallery.catalogues.each do |catalogue|
-    .catalogue
-      = link_to gallery_catalogue_path(gallery_id: @gallery.name_unique, id: catalogue.name_unique) do
+    = link_to gallery_catalogue_path(gallery_id: @gallery.name_unique, id: catalogue.name_unique), class: 'catalogue', style: "background-image: url(\"#{catalogue.representative_image.url}\")" do
+      .inner-name
         %h4
           = catalogue.name
-        = image_tag catalogue.representative_image.url
 

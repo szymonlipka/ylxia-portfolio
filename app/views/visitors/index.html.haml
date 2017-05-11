@@ -6,5 +6,5 @@
 
 .works
   - @works.shuffle.each do |work|
-    .work{style: "background-image: url(\"#{asset_url(work.image.url)}\")"}
+    .work{style: "background-image: url(\"#{work.image.url}\")"}
       = image_tag work.image.url

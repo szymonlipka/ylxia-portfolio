@@ -13,6 +13,9 @@
     = f.label :catalogue
     = f.select(:catalogue_id, options_for_select(Catalogue.all.map{|catalogue| [catalogue.name, catalogue.id]}, @work.catalogue_id))
   .field
+    = f.label :top_work
+    = f.check_box :top_work
+  .field
     = f.label :image
     = f.file_field :image
   - unless @work.image.blank?

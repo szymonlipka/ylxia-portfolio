@@ -14,6 +14,8 @@ class Work < ApplicationRecord
                     s3_host_name: "s3-#{ENV['AWS_REGION']}.amazonaws.com"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
+  scope :top_works, -> {where(top_work: true)}
+
   belongs_to :catalogue
 
 end

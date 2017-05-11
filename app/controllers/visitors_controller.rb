@@ -1,6 +1,6 @@
 class VisitorsController < ApplicationController
   def index
-    @works = Work.where(top_work: true)
+    @works = Work.top_works
   end
 
   def about
